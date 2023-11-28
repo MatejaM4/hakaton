@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LoggedIn.master.cs" Inherits="hakaton.LoggedIn" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title><%: Page.Title %></title>
+    <link rel="stylesheet" href="~/Content/styles.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="logedin">
+        <div>
+            <img src="./Content/Images/logo.png">
+        </div>
+        <div class="nav-right">
+            <span><a href="LiveMatches.aspx" class="nav-link-my">Live Matches</a></span>
+            <span><a href="Edit.aspx" class="nav-link-my">Edit</a></span>
+            <span><a href="#" class="nav-link-my">Log Out</a></span>
+        </div>
+     </nav>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
