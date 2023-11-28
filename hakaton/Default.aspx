@@ -92,10 +92,10 @@
      </section>
     <footer>
         <div class="footer-column">
-            <img src="images/logo-sm.svg">
-            <span><a href="#hiw">How it works</a></span>
-            <span><a href="#features">Features</a></span>
-            <span><a href="sports.html">Sports</a></span>
+            <img src="./Content/Images/logo-sm.svg">
+            <span><a href="Default.aspx#hiw">How it works</a></span>
+            <span><a href="Default.aspx#features">Features</a></span>
+            <span><a href="Sports.aspx">Sports</a></span>
         </div>
         <div class="footer-column">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91892.64399393559!2d21.165482183279725!3d43.96670663029036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4756c46f63f3b5ff%3A0x7d7de6c47baa8c0e!2sJagodina!5e0!3m2!1sen!2srs!4v1701164839522!5m2!1sen!2srs" width="300" height="230" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -107,9 +107,9 @@
                 <a href="#">Subscribe</a>
             </div>
             <div class="social-icons">
-                <img src="images/google.svg">
-                <img src="images/fb.svg">
-                <img src="images/ig.svg">
+                <img src="./Content/Images/google.svg">
+                <img src="./Content/Images/fb.svg">
+                <img src="./Content/Images/ig.svg">
             </div>
         </div>
      </footer>

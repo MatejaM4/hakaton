@@ -11,7 +11,7 @@
   <body>
     <nav>
       <div class="sign-nav">
-        <img src="./Content/images/logo.png" />
+        <a href="Default.aspx"><img src="./Content/images/logo.png" /></a>
       </div>
     </nav>
 

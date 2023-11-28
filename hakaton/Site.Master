@@ -17,7 +17,7 @@
 
 </head>
 <body>
-    <form runat="server" style="margin: 0;">
+    <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
                 <asp:ScriptReference Name="MsAjaxBundle" />
@@ -34,21 +34,20 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-    </form>
 
         <nav>
-            <div>
-                <a href="#"><img src="./Content/Images/logo.png"></a>
-            </div>
-            <div class="nav-center">
-                <span><a href="Default.aspx#hiw" class="nav-link-my">How it works</a></span>
-                <span><a href="Default.aspx#features" class="nav-link-my">Features</a></span>
-                <span><a href="Sports.aspx" class="nav-link-my">Sports</a></span>
-            </div>
-            <div class="nav-right">
-                <span><a href="SignIn.aspx" class="nav-link-my">Sign In</a></span>
-                <span class="nav-link-my btn-main"><a href="SignUp.aspx">Sign Up</a></span>
-            </div>
+        <div>
+            <a href="#"><img src="./Content/Images/logo.png"></a>
+        </div>
+        <div class="nav-center">
+            <span><a href="Default.aspx#hiw" class="nav-link-my">How it works</a></span>
+            <span><a href="Default.aspx#features" class="nav-link-my">Features</a></span>
+            <span><a href="Sports.aspx" class="nav-link-my">Sports</a></span>
+        </div>
+        <div class="nav-right">
+            <span><a href="SignIn.aspx" class="nav-link-my">Sign In</a></span>
+            <span class="nav-link-my btn-main"><a href="SignUp.aspx">Sign Up</a></span>
+        </div>
         </nav>
 
 
@@ -56,7 +55,7 @@
             </asp:ContentPlaceHolder>
 
 
-
+        </form>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
     </asp:PlaceHolder>
