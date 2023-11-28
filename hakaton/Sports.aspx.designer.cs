@@ -11,7 +11,7 @@ namespace hakaton
 {
 
 
-    public partial class Contact
+    public partial class Sports
     {
     }
 }

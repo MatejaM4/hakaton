@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace hakaton
 {
-    public partial class About : Page
+    public partial class Sports : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
