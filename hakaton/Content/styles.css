@@ -75,8 +75,10 @@ nav a.nav-link-my {
     border-radius: 30px;
     padding: 16px 30px;
     color: #fff;
+    background: transparent !important;
     transition: 0.3s;
 }
+
 
 .btn-main a {
     color: #fff;

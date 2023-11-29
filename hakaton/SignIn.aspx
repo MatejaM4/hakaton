@@ -14,17 +14,17 @@
         <a href="Default.aspx"><img src="./Content/images/logo.png" /></a>
       </div>
     </nav>
-
+    <form runat="server">
     <section class="signin container-my">
       <div class="signin-wrap">
         <div class="left-img">Sign In</div>
         <div class="right-div">
           <div class="input-container">
-            <input class="sign-control" placeholder="Email Address..." type="text" />
-            <input class="sign-control" placeholder="Password..." type="password" />
+            <input id="email" class="sign-control" placeholder="Email Address..." type="text" runat="server" />
+            <input id="pass" class="sign-control" placeholder="Password..." type="password" runat="server" />
           </div>
           <div>
-            <a class="btn-main">Sign In</a>
+              <asp:Button ID="btnSignIn" runat="server" Text="Sign In" CssClass="btn-main" OnClick="btnSignIn_Click" />
           </div>
           <div>
             <p><a href="SignUp.aspx" class="redirect">Don't have an account</a></p>
@@ -32,6 +32,7 @@
         </div>
       </div>
     </section>
+    </form>
   </body>
 </html>
 

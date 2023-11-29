@@ -43,6 +43,7 @@
             <span><a href="Default.aspx#hiw" class="nav-link-my">How it works</a></span>
             <span><a href="Default.aspx#features" class="nav-link-my">Features</a></span>
             <span><a href="Sports.aspx" class="nav-link-my">Sports</a></span>
+            <span><a href="./Profile/LiveMatches.aspx" class="nav-link-my">Live Matches</a></span>
         </div>
         <div class="nav-right">
             <span><a href="SignIn.aspx" class="nav-link-my">Sign In</a></span>

@@ -8,7 +8,7 @@
                     <p class="date">27.11.2023</p>
                     <p class="time">18:00</p>
                 </div>
-                <img src="./Content/Images/loptak.png">
+                <img src="../Content/Images/loptak.png">
                 <div class="right-feed">
                     <p class="teams">GSW VS LAL</p>
                 </div>
@@ -18,7 +18,7 @@
                     <p class="date">27.11.2023</p>
                     <p class="time">18:00</p>
                 </div>
-                <img src="./Content/Images/loptaf.png">
+                <img src="../Content/Images/loptaf.png">
                 <div class="right-feed">
                     <p class="teams">GSW VS LAL</p>
                 </div>

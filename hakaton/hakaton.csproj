@@ -121,10 +121,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\styles.css" />
     <Content Include="Default.aspx" />
-    <Content Include="Edit.aspx" />
+    <Content Include="Profile\Edit.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="LiveMatches.aspx" />
+    <Content Include="Profile\LiveMatches.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -154,6 +154,7 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="LoggedIn.Master" />
+    <Content Include="Profile\Web.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -200,21 +201,21 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Edit.aspx.cs">
+    <Compile Include="Profile\Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Edit.aspx.designer.cs">
+    <Compile Include="Profile\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="LiveMatches.aspx.cs">
+    <Compile Include="Profile\LiveMatches.aspx.cs">
       <DependentUpon>LiveMatches.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LiveMatches.aspx.designer.cs">
+    <Compile Include="Profile\LiveMatches.aspx.designer.cs">
       <DependentUpon>LiveMatches.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoggedIn.Master.cs">

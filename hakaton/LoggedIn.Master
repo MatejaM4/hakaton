@@ -12,12 +12,12 @@
         <div>
             <nav class="logedin">
         <div>
-            <img src="./Content/Images/logo.png">
+            <img src="../Content/Images/logo.png">
         </div>
         <div class="nav-right">
             <span><a href="LiveMatches.aspx" class="nav-link-my">Live Matches</a></span>
             <span><a href="Edit.aspx" class="nav-link-my">Edit</a></span>
-            <span><a href="#" class="nav-link-my">Log Out</a></span>
+            <span><asp:Button ID="Button1" CssClass="nav-link-my" runat="server" Text="Log Out" OnClick="Button1_Click" /></span>
         </div>
      </nav>
 
