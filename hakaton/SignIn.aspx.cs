@@ -14,7 +14,10 @@ namespace hakaton
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (User.Identity.IsAuthenticated)
+            {
+                Response.Redirect("Profile/LiveMatches");
+            }
         }
 
         protected void btnSignIn_Click(object sender, EventArgs e)
@@ -38,6 +41,8 @@ namespace hakaton
                         HttpCookie loginCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encTicket);
                         loginCookie.Expires = DateTime.Now.AddDays(30);
                         Response.Cookies.Add(loginCookie);
+
+                        Session["firstRun"] = "first";
 
                         Response.Redirect("~/Profile/LiveMatches.aspx");
                     }

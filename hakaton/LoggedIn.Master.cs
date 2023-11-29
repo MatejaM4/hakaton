@@ -18,6 +18,7 @@ namespace hakaton
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            Session.Abandon();
             FormsAuthentication.SignOut();
             Response.Redirect("~/Default.aspx");
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -13,7 +14,10 @@ namespace hakaton
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (User.Identity.IsAuthenticated)
+            {
+                Response.Redirect("Profile/LiveMatches");
+            }
         }
 
         protected void btnSignUp_Click(object sender, EventArgs e)
@@ -33,7 +37,18 @@ namespace hakaton
                 }
                 catch (Exception ex) { }
 
-                connection.Close();   
+                connection.Close();
+
+
+                FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(username.Value, false, 30);
+                string encTicket = FormsAuthentication.Encrypt(ticket);
+
+                HttpCookie loginCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encTicket);
+                loginCookie.Expires = DateTime.Now.AddDays(30);
+                Response.Cookies.Add(loginCookie);
+                Session["firstRun"] = "first";
+
+                Response.Redirect("~/Profile/LiveMatches.aspx");
             }
         }
     }
