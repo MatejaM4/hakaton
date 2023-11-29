@@ -85,9 +85,9 @@ nav a.nav-link-my {
     text-decoration: none;
 }
 
-    .btn-main.full:hover {
-        background: #d62923bd;
-    }
+.btn-main.full:hover {
+     background: #d62923bd;
+}
 
 .hero {
     background-image: url("./images/hero.png");
