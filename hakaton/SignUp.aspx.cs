@@ -36,7 +36,7 @@ namespace hakaton
                     cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex) { }
-
+                SqlDataReader reader = cmd.ExecuteReader();
                 connection.Close();
 
 

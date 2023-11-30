@@ -51,7 +51,7 @@ namespace hakaton
 
 
                 using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-Q6VS2HN; Database=master; Integrated Security = True; MultipleActiveResultSets=True;"))
-                    {
+                {
                         string sqlstring = "INSERT INTO Utakmica(Datum, Vreme, Domacin, Gost, Sport) Values (@datum, @vreme, @domacin, @gost, @sport)";
                         SqlCommand cmd = new SqlCommand(sqlstring, connection);
                         connection.Open();
@@ -81,7 +81,7 @@ namespace hakaton
                             mesec = result[i]["event_status_detail"].ToString().Substring(0, 2);
                             dan = result[i]["event_status_detail"].ToString().Substring(3, 2);
 
-                            vreme = $"{result[i]["date_event"].ToString().Substring(11, 5)}";
+                            vreme = $"0{result[i]["date_event"].ToString().Substring(11, 4)}";
                         }
                         else
                         {
@@ -98,8 +98,14 @@ namespace hakaton
                                 vreme = $"0{result[i]["date_event"].ToString().Substring(9, 5)}";
                             }
                         }
+                        string dan1;
+                        if (Convert.ToInt32(dan) < 10)
+                        {
+                            dan1 = $"0{dan}";
+                        }
+                        else dan1 = dan;
 
-                            var p1 = new HtmlGenericControl("p") { InnerText = $"{dan}.{mesec}.{godina}" };
+                            var p1 = new HtmlGenericControl("p") { InnerText = $"{dan1}.{mesec}.{godina}" };
                             p1.Attributes.Add("class", "date");
                             var p2 = new HtmlGenericControl("p") { InnerText = $"{vreme}" };
                             p2.Attributes.Add("class", "time");
@@ -142,12 +148,11 @@ namespace hakaton
                             catch (Exception ex) { }
                         }
                         connection.Close();
-                    }
+                }
                     Session["firstRun"] = "no";
             }
             else if (Session["firstRun"] != null)
             {
-                // TODO NE RADI LEPO UCITAVANJE POPRAVI
                 using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-Q6VS2HN; Database=master; Integrated Security = True; MultipleActiveResultSets=True;"))
                 {
                     string sqlstring = "Select * From Utakmica";
@@ -165,12 +170,13 @@ namespace hakaton
                         panel2.Controls.Add(panel3);
                         panel2.Controls.Add(panel4);
 
+                        DateTime dt = Convert.ToDateTime(reader["Datum"]);
+                        DateTime t = Convert.ToDateTime(reader["Vreme"]);
 
-                        string godina = reader["Datum"].ToString().Substring(0, 4);
-                        string mesec = reader["Datum"].ToString().Substring(5,2);
-                        string dan = reader["Datum"].ToString().Substring(8,2);
-
-                        string vreme = reader["Vreme"].ToString().Substring(11, 5);
+                        string godina = dt.Year.ToString();
+                        string mesec = dt.Month.ToString("D2");
+                        string dan = dt.Day.ToString("D2");
+                        string vreme = $"{t.Hour.ToString("D2")}:{t.Minute.ToString("D2")}";
 
 
                         var p1 = new HtmlGenericControl("p") { InnerText = $"{dan}.{mesec}.{godina}" };
@@ -181,7 +187,6 @@ namespace hakaton
                         panel3.Controls.Add(p2);
 
                         var img = new HtmlGenericControl("img");
-                        string sport;
 
                         if (reader["Sport"].ToString() == "Kosarka")
                         {

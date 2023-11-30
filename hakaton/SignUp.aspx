@@ -11,6 +11,10 @@
         .btn-main {
             background: transparent;
         }
+
+        .btn-main:hover {
+            background: #d62823 !important;
+        }
     </style>
 </head>
 <body>

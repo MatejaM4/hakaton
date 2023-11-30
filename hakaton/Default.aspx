@@ -101,11 +101,6 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91892.64399393559!2d21.165482183279725!3d43.96670663029036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4756c46f63f3b5ff%3A0x7d7de6c47baa8c0e!2sJagodina!5e0!3m2!1sen!2srs!4v1701164839522!5m2!1sen!2srs" width="300" height="230" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="footer-column">
-            <h4>Subscribe For Our Newsletter</h4>
-            <div>
-                <input type="text" placeholder="Enter your email...">
-                <a href="#">Subscribe</a>
-            </div>
             <div class="social-icons">
                 <img src="./Content/Images/google.svg">
                 <img src="./Content/Images/fb.svg">
@@ -113,4 +108,7 @@
             </div>
         </div>
      </footer>
+    <script>
+
+    </script>
 </asp:Content>

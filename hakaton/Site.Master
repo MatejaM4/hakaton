@@ -14,6 +14,13 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="~/Content/styles.css">
+    <style>
+        .btn-main:hover {
+    background-color: #d62823 !important;
+    transition: 0.3s !important;
+    cursor: pointer !important;
+}
+    </style>
 
 </head>
 <body>

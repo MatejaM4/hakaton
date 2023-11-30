@@ -6,20 +6,51 @@
 <head runat="server">
     <title><%: Page.Title %></title>
     <link rel="stylesheet" href="~/Content/styles.css">
+    <style>
+        .log-out {
+            background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+            display: inline-block !important;
+position: relative !important;
+color: #fff !important;
+text-decoration: none !important;
+padding-bottom: 4px !important;
+transition: 0.3s all;
+        }
+        .log-out:hover {
+            color: #D62823 !important ;
+        }
+
+        .logedin {
+           display:flex;
+           align-items: center;
+           width: 80% !important;
+           justify-content: space-around;
+           margin: 0 !important;
+        }
+       
+
+
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <nav class="logedin">
-        <div>
-            <img src="../Content/Images/logo.png">
-        </div>
-        <div class="nav-right">
-            <span><a href="LiveMatches.aspx" class="nav-link-my">Live Matches</a></span>
-            <span><a href="Edit.aspx" class="nav-link-my">Edit</a></span>
-            <span><asp:Button ID="Button1" CssClass="nav-link-my" runat="server" Text="Log Out" OnClick="Button1_Click" /></span>
-        </div>
-     </nav>
+             <nav class="logedin">
+                    <div>
+                        <a href="../Default.aspx"><img src="../Content/Images/logo.png"></a>
+                    </div>
+                    <div class="nav-right">
+                        <span><a href="LiveMatches.aspx" class="nav-link-my">Live Matches</a></span>
+                        <span><a href="Edit.aspx" class="nav-link-my">Edit</a></span>
+                        <span><asp:Button ID="Button1" CssClass="nav-link-my log-out" runat="server" Text="Log Out" OnClick="Button1_Click" /></span>
+                    </div>
+             </nav>
 
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
