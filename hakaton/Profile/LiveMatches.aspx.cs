@@ -50,7 +50,7 @@ namespace hakaton
                 result.Merge(res2, new JsonMergeSettings { MergeArrayHandling = MergeArrayHandling.Concat });
 
 
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-Q6VS2HN; Database=master; Integrated Security = True; MultipleActiveResultSets=True;"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=LUKA; Database=Hakaton; Integrated Security = True; MultipleActiveResultSets=True;"))
                 {
                         string sqlstring = "INSERT INTO Utakmica(Datum, Vreme, Domacin, Gost, Sport) Values (@datum, @vreme, @domacin, @gost, @sport)";
                         SqlCommand cmd = new SqlCommand(sqlstring, connection);
@@ -153,7 +153,7 @@ namespace hakaton
             }
             else if (Session["firstRun"] != null)
             {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-Q6VS2HN; Database=master; Integrated Security = True; MultipleActiveResultSets=True;"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=LUKA; Database=Hakaton; Integrated Security = True; MultipleActiveResultSets=True;"))
                 {
                     string sqlstring = "Select * From Utakmica";
                     SqlCommand cmd = new SqlCommand(sqlstring, connection);

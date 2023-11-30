@@ -22,7 +22,7 @@ namespace hakaton
 
         protected void btnSignIn_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-Q6VS2HN; Database=master; Integrated Security = True; MultipleActiveResultSets=True;"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=LUKA; Database=Hakaton; Integrated Security = True; MultipleActiveResultSets=True;"))
             {
                 string sqlstring = "SELECT * FROM Korisnik WHERE Email = @email AND Sifra = @pass";
                 SqlCommand cmd = new SqlCommand(sqlstring, connection);

@@ -22,7 +22,7 @@ namespace hakaton
 
         protected void btnSignUp_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-Q6VS2HN; Database=master; Integrated Security = True; MultipleActiveResultSets=True;"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=LUKA; Database=Hakaton; Integrated Security = True; MultipleActiveResultSets=True;"))
             {
                 string sqlstring = "INSERT INTO Korisnik(Ime, Korisnicko_Ime, Email, Sifra) Values (@ime, @username, @email, @sifra)";
                 SqlCommand cmd = new SqlCommand(sqlstring, connection);
@@ -36,7 +36,6 @@ namespace hakaton
                     cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex) { }
-                SqlDataReader reader = cmd.ExecuteReader();
                 connection.Close();
 
 

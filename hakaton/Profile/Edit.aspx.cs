@@ -15,7 +15,7 @@ namespace hakaton
     {
         public void LoadTable()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-Q6VS2HN; Database=master; Integrated Security = True; MultipleActiveResultSets=True;"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=LUKA; Database=Hakaton; Integrated Security = True; MultipleActiveResultSets=True;"))
             {
                 SqlCommand command = new SqlCommand("Select id, Convert(varchar, Datum, 102) as 'Datum', Convert(varchar, Vreme, 108) as 'Vreme', Domacin, Gost, Sport FROM Utakmica", connection);
                 connection.Open();
@@ -33,9 +33,9 @@ namespace hakaton
 
         protected void btn_add_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-Q6VS2HN; Database=master; Integrated Security = True; MultipleActiveResultSets=True;"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=LUKA; Database=Hakaton; Integrated Security = True; MultipleActiveResultSets=True;"))
             {
-                string sqlstring = "INSERT INTO Utakmica(Datum, Vreme, Domacin, Gost, Sport) Values (Convert(DateTime, @datum, 103), @vreme, @domacin, @gost, @sport)";
+                string sqlstring = "INSERT INTO Utakmica(Datum, Vreme, Domacin, Gost, Sport) Values (Convert(Varchar, @datum, 103), @vreme, @domacin, @gost, @sport)";
                 SqlCommand cmd = new SqlCommand(sqlstring, connection);
                 cmd.Parameters.AddWithValue("@datum", date.Value);
                 cmd.Parameters.AddWithValue("@vreme", time.Value);
@@ -71,7 +71,7 @@ namespace hakaton
 
         protected void btn_edit_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-Q6VS2HN; Database=master; Integrated Security = True; MultipleActiveResultSets=True;"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=LUKA; Database=Hakaton; Integrated Security = True; MultipleActiveResultSets=True;"))
             {
                 string sqlstring = "UPDATE Utakmica SET Datum = Convert(varchar, @datum, 103), Vreme = @vreme, Domacin = @domacin, Gost = @gost, Sport = @sport WHERE id = @id";
                 SqlCommand cmd = new SqlCommand(sqlstring, connection);
@@ -106,7 +106,7 @@ namespace hakaton
         {
             if(gv_baza.SelectedIndex >= 0)
             {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-Q6VS2HN; Database=master; Integrated Security = True; MultipleActiveResultSets=True;"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=LUKA; Database=Hakaton; Integrated Security = True; MultipleActiveResultSets=True;"))
                 {
                     string sqlstring = "DELETE FROM Utakmica WHERE id = @id";
                     SqlCommand cmd = new SqlCommand(sqlstring, connection);
